@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/addTask.css" type="text/css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <header class="bg-primary">
+    <nav class="d-flex">
+      <div class="Container">
+        <span>
+          <ul>
+            <li><img src="/images/adminIcon.png" alt="Admin Dashboard" height="50px" width="50px"></li>
+            <li> Employee Portal</li>
+          </ul>
+        </span>
+      </div>
+
+      <div class="topright">
+        <span>
+          <ul>
+            <li><img src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="" height="40px"
+                width="40px" style="border-radius: 50%;"></li>
+            <li class="admin">User</li>
+          </ul>
+
+        </span>
+
+      </div>
+    </nav>
+  </header>
+  <main class="row d-flex">
+    <aside class="col-3">
+      <div class="sidebar">
+        <div class="sidebarContent">
+
+          <li class="sidebar-item">
+            <form action="/employee/displayEmployeeDashboard">
+              <button type="submit" class="btn">
+                <i class="fa fa-tachometer icon"></i>Dashboard</button>
+            </form>
+          </li>
+
+          <li class="sidebar-item">
+            <button type="submit" class="btn disabled"><i class="fa fa-user icon"></i>Profile</button>
+          </li>
+          <br><br>
+
+          <li class="sidebar-item">
+            <form action="/empTasks/addingTask">
+              <button type="submit" class="btn taskButton">Add Task</button>
+            </form>
+          </li>
+        </div>
+      </div>
+    </aside>
+
+    <div class="col-5 card bg-light mt-3">
+      <div class="card-body">
+        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Task Details</h3>
+
+        <form action="/empTasks/addEmpTask" method="post">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+
+              <div class="form-outline">
+                <label class="form-label">Employee ID</label>
+                <input type="text" id="empId" name="empId" placeholder="Employee ID"
+                  class="form-control form-control-lg" />
+
+              </div>
+
+            </div>
+            <div class="col-md-6 mb-4">
+
+              <div class="form-outline">
+                <label class="form-label">Task Type</label><br>
+                <input type="text" placeholder="Break/Meeting/Work" name="taskType" id="taskType" class="form-control form-control-lg">
+
+                <!-- <select class=" select form-control-lg">
+                  <option name="" value="taskType">Choose option</option>
+                  <option value="1" name="Break">Break</option>
+                  <option value="2" name="Meeting">Meeting</option>
+                  <option value="3" name="Work">Work</option>
+                </select> -->
+              </div>
+
+              
+
+            </div>
+            <div class="col-md-8 mb-4">
+
+              <div class="form-outline">
+                <label class="form-label">Task Description</label>
+                <input type="text" id="taskDescription" name="taskDescription" placeholder="Add task description"
+                  class="form-control form-control-lg" />
+
+              </div>
+
+            
+
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-4 d-flex align-items-center">
+
+              <div class="form-outline datepicker w-100">
+                <label for="birthdayDate" class="form-label">Start Time</label>
+                <input type="datetime-local" name="startTime" class="form-control form-control-lg" id="StartTime" />
+
+              </div>
+
+            </div>
+            <div class="col-md-6 mb-4">
+
+              <div class="form-check form-check-inline">
+                <label for="birthdayDate" class="form-label">Time Taken</label>
+                <input type="number" name="timeSpent" placeholder="Enter minutes (int)"
+                  class="form-control form-control-lg" id="timeTaken" />
+
+              </div>
+
+            </div>
+          </div>
+
+
+          <div class="mt-4 pt-2">
+            <input class="btn btn-primary btn-lg" type="submit" value="Submit" />
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

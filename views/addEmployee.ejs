@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/addEmployee.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+
+        <div class="Container">
+            <span>
+                <ul>
+                    <li><img src="/images/adminIcon.png" alt="not found" height="50px" width="50px"></li>
+                    <li> Admin Portal</li>
+                </ul>
+            </span>
+        </div>
+
+        <div class="topright">
+            <span>
+                <ul>
+                    <li><img src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="" height="40px"
+                            width="40px" style="border-radius: 50%;"></li>
+                    <li class="admin">Admin</li>
+                </ul>
+            </span>
+        </div>
+    </header>
+
+    <aside class="left-sidebar">
+        <!-- Sidebar scroll-->
+        <div class="scroll-sidebar">
+            <!-- Sidebar navigation-->
+            <nav class="sidebar-nav">
+                <ul id="sidebarnav">
+                    <!-- User Profile-->
+
+                    <li class="sidebar-item d-flex ">
+
+                        <form action="../employee/displayAdminDashboardPage" method="get">
+                            <button type="submit" class="hide-menu"><i class="fa fa-tachometer"></i>Dashboard</button>
+                        </form>
+                    </li><br>
+
+                    </li><br>
+
+                    <!-- Add employee-->
+
+                    <li class="sidebar-item d-flex">
+
+                        <form action="../employee/displayAddEmployeePage" method="get">
+                            <button type="submit" class="hide-menu"><i class="fa fa-plus"></i> Add Employees</button>
+                        </form>
+                    </li><br>
+
+
+
+
+                </ul>
+
+            </nav>
+            <!-- End Sidebar navigation -->
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="row">
+                <span>
+                    <ul>
+                        <!-- item-->
+                        <li><a href="#"><i class="fa fa-cog"></i></a></li>
+
+                        <li>
+                            <!-- item-->
+                            <a href="#"><i class="fa fa-envelope"></i></a>
+                        </li>
+                        <li>
+
+                            <!-- item-->
+                            <a href="#"><i class="fa fa-power-off"></i></a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </aside>
+
+    <div class="bottomnavbar">
+        <div class="bottomnav">
+            <h1>Add Employees</h1>
+            <h3>Home > <span class="dash" style="color:grey;">Add Employees</span></h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <form action="/employee/addEmployee" method="post">
+
+            <!-- <center> -->
+            <h1 class="text-center"><b><strong> Add Employee Details</strong></b></h1>
+            <!-- </center> -->
+            <hr>
+            <label><b> Name</b> </label>
+            <input type="text" name="empName" placeholder="Enter Name" size="15" required> <br>
+
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="emailId" required> <br>
+
+            <label>
+                <b>Contact </b>
+            </label>
+
+            <input type="tel" placeholder="Enter Contact Number" name="phoneNumber" size="10" / min="10" maxlength="10"
+                required> <br>
+
+            <label>
+                <b>Department </b>
+            </label>
+
+            <input type="text" name="department" id="department"
+                placeholder="Enter department from below mentioned options">
+            <table>
+                <tr>
+                    <td>IT services</td>
+                    <td>Research and development</td>
+                    <td> Accounts and Finance</td>
+                </tr>
+                <tr>
+                    <td>Sales and marketing</td>
+                    <td>HR</td>
+                    <td>Infrastructures</td>
+                </tr>
+                <tr>
+                    <td>Product development</td>
+                    <td>Admin department</td>
+                    <td>Cyber Security</td>
+                </tr>
+            </table>
+            <!-- <label>
+                <select name="department">
+                    <option value="Department" name="">Department</option>
+                    <option value="" name="IT services">IT services</option>
+                    <option value="" name="Research and development">Research and development</option>
+                    <option value="" name="Accounts and Finance">Accounts and Finance</option>
+                    <option value="" name="Sales and marketing">Sales and marketing</option>
+                    <option value="" name="HR">HR</option>
+                    <option value="" name="Infrastructures">Infrastructures</option>
+                    <option value="" name="Product development">Product development</option>
+                    <option value="" name="Admin department">Admin department</option>
+                    <option value="" name="Cyber Security">Cyber Security</option>
+                </select> 
+            </label> -->
+            <br>
+            <label>
+                <b> Joining Date</b>
+                <input type="date" name="dateOfJoining"></label><br>
+            <label>
+                <button type="submit" class="addbtn"> Add</button> </label>
+        </form>
+    </div>
+
+
+    <script src="table.js"></script>
+
+
+
+</body>
+
+</html>
