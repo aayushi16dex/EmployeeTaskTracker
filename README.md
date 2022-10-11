@@ -10,7 +10,7 @@ VS Code
 
 Project Description: 
 
-On login, an authentication check is performed and it is checked it the user trying to access the portal is registered in the database.
+On login, an authentication check is performed and it checks if the user trying to access the portal is registered in the database.
 If yes, then their role is checked.
      Role: Admin ==> Admin dashboard is opened
      Role: Employee ==> Employee dashboard is opened
