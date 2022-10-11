@@ -39,12 +39,17 @@ E.g:
             Employee Id will be: 87cys051
             
 Login Details:
-/**** ADMIN ****/
+*** ADMIN ***
 username: john@gmail.com
 password: johnjohn
 
-/**** EMPLOYEE ****/
+*** EMPLOYEE ***
 username: harry@outlook.com
 password: harry
+
+Database Access (MongoDB):
+'mongodb+srv://admin:fliprRoot@flipr-database.vtolarb.mongodb.net/employeeDB'
+
+
 
 
