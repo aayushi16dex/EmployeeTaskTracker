@@ -37,3 +37,14 @@ E.g:
             Employee Number: If there are already 50 employees in cyber security department, then new emp will get emp num as 51
             
             Employee Id will be: 87cys051
+            
+Login Details:
+/**** ADMIN ****/
+username: john@gmail.com
+password: johnjohn
+
+/**** EMPLOYEE ****/
+username: harry@outlook.com
+password: harry
+
+
