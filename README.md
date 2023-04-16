@@ -47,9 +47,6 @@ password: johnjohn
 username: harry@outlook.com
 password: harry
 
-Database Access (MongoDB):
-'mongodb+srv://admin:fliprRoot@flipr-database.vtolarb.mongodb.net/employeeDB'
-
 Run the app by writing:
 nodemon app.js
 OR
